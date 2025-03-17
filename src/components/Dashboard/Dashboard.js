@@ -7,12 +7,12 @@ const Dashboard = () => {
     const [scrums, setScrums] = useState([]);
     const [selectedScrum, setSelectedScrum] = useState(null);
     const [showForm, setShowForm] = useState(false);
-    const [users, setUsers] = useState([]);
     const [newScrumName, setNewScrumName] = useState('');
     const [newTaskTitle, setNewTaskTitle] = useState('');
     const [newTaskDescription, setNewTaskDescription] = useState('');
     const [newTaskStatus, setNewTaskStatus] = useState('To Do');
     const [newTaskAssignedTo, setNewTaskAssignedTo] = useState('');
+    const [users, setUsers] = useState([]);
     const { user } = useContext(UserContext);
 
     useEffect(() => {
@@ -68,7 +68,7 @@ const Dashboard = () => {
                 history: [
                     {
                         status: newTaskStatus,
-                        date: new Date().toISOString().split('T')[0], // To give    current date
+                        date: new Date().toISOString().split('T')[0], 
                     },
                 ],
             });

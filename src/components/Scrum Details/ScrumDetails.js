@@ -58,7 +58,7 @@ const ScrumDetails = ({ scrum }) => {
                     ...tasks.find(task => task.id === taskId).history,
                     {
                         status: newStatus,
-                        date: new Date().toISOString().split('T')[0], // Set the current date
+                        date: new Date().toISOString().split('T')[0],
                     },
                 ],
             });
